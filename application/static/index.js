@@ -30,7 +30,7 @@ init();
 
 const signin = async (login, password) => {
   try {
-    const status = await com.api.auth.signIn({ login, password });
+    const status = await com.api.auth.signin({ login, password });
     if (status.result === 'success') {
 	  		accessGranted();
     }
