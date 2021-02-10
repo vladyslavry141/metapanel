@@ -14,32 +14,26 @@ table{
 }
 
   h2 {
-    margin: 15px;
     text-align: center;
+    width: 100%;
   }
   form {
-    margin-top: 30vh;
-  }
-  button:hover {
-    background-color: #ffffff;
-    border-color: #000;
-    color: #000;
-  }
- form button {
-    padding: 5px 15px 5px 15px;
-    cursor: pointer;
-    margin: 35px;
-    width: calc(100% - 70px);
-    border-width: 0 20px 0 20px;
-    background-color: #000;
-    border-style: solid;
-    border-color: #FFFFFF;
-    color: #FFFFFF;
-    transition: all 0.25s linear;
+	width: 270px;
+    height: 260px;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
   }
   .error {
     color: red;
   }
   .success {
     color: green;
+    }
+#message {
+  height: 20px;
+    width: 100%;
+    text-align: center;
   }

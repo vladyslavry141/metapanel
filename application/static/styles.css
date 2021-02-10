@@ -8,7 +8,6 @@
 body {
   color: #000000;
   margin: 0;
-  background: #fbc8c8;
   font-family: 'Source Code Font';
   text-transform: uppercase;
   font-weight: normal;
@@ -20,12 +19,12 @@ body {
   text-align: center;
 }
 #menu {
-  background: #444444;
+  background: #0f0e0e;
+  color: #fff;
     position: fixed;
     height: calc(100% - 29px);
     width: 220px;
     padding: 25px;
-    z-index: 1;
     overflow-y: scroll;
     left: -260px;
     transition: all 0.5s linear;
@@ -83,15 +82,7 @@ li {
 li.current-menu {
   color: red;
 }
-li img {
-  position: absolute;
-    height: 31px;
-    width: 31px;
-}
-li span {
-    margin-left: 32px;
-}
-li button {
+button {
     border: none;
     color: inherit;
     background: inherit;
@@ -100,10 +91,11 @@ li button {
     text-align: left;
     cursor: pointer;
 }
-li button[disabled] {
+button[disabled] {
     color: #f26868;
+    cursor: default;
 }
-li button:hover {
+button:hover {
     color: #f26868;
 }
 #right header {
@@ -120,34 +112,31 @@ li button:hover {
     outline: unset;
   }
     input {
-    margin: 15px;
-    height: 17px;
-    padding: 3px 2px;
+    width: 100%;
+    padding: 6px 10px;
     background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     border-width: 0px 0px 1px 10px;
     border-style: solid;
     border-color: #000;
     color: #000;
     border-image: unset;
   }
+button {
+    padding: 5px 25px 5px 25px;
+    cursor: pointer;
+    transition: all 0.25s linear;
+    background: #000;
+    color: #fff;
+    border: none;
+    text-align: center;
+  }
 
 #content {
   position: absolute;
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-left: 30px;
-  margin-left: 254px;
-  min-height: calc(100% - 30px);
-  width: calc(100% - 314px);
+    padding: 30px;
+  background: #fff;
+  min-height: calc(100% - 60px);
+  width: calc(100% - 60px);
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -155,7 +144,8 @@ li button:hover {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-    z-index: 2;
+  align-items: center;
+  transition: all 0.5s linear;
 }
 
 #content > div {
