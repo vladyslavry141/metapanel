@@ -6,36 +6,33 @@ const doc = new Document(document);
 const accessGranted = () => {
   doc.getById('message').setText('ACCESS GRANTED').setClass('success');
   doc.getById('menu').style.left = '0px';
+  doc.getById('content').style.opacity = '0';
   doc.getById('content').style.right = '0px';
   doc.getById('content').style.width = 'calc(100% - 60px - 260px)';
   setTimeout(() => {
+    doc.getById('signin').remove();
+    doc.getById('content').style.opacity = '1';
   }, 1000);
-};
+}
 const accessDenied = () => {
   doc.getById('message').setText('ACCESS DENIED').setClass('error');
-};
-const init = async () => {
+}
+
+const comInit = async () => {
   try {
 	  await com.loadAll();
-	  const res = await com.api.auth.status();
-	  if(res.result){
-	  	accessGranted();
-	  }
   } catch (err) {
 	console.log(err);
   }
 };
 
-init();
+comInit();
 
 const signin = async (login, password) => {
   try {
-    const status = await com.api.auth.signin({ login, password });
-    if (status.result === 'success') {
-	  		accessGranted();
-    }
+    await com.api.auth.signin({ login, password });
+    accessGranted();
   } catch (err) {
-	console.log(err);
     accessDenied();
   }
 };
