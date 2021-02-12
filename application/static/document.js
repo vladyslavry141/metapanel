@@ -5,24 +5,24 @@ export class Document {
     this.doc = doc;
   }
   static wrapTable(tableElement) {
-    tableElement.delRow = index => {
+    tableElement.delRow = (index) => {
       this.getElementsByTagName('tr').deleteRow(index);
     };
-    tableElement.delAllRows = from => {
+    tableElement.delAllRows = (from) => {
       for (let i = from; i < this.getElementsByTagName('tr').length; i) {
         this.deleteRow(from);
       }
     };
-    tableElement.row = index => Document.wrap(this.getElementsByTagName('tr')[index]);
+    tableElement.row = (index) => Document.wrap(this.getElementsByTagName('tr')[index]);
     tableElement.delRows = (from, count) => {
       for (let i = 0; i < count; i++) {
         this.delRow(from);
       }
     };
-    tableElement.addRow = index => Document.wrap(this.insertRow(index));
+    tableElement.addRow = (index) => Document.wrap(this.insertRow(index));
   }
   static wrapRow(rowElement) {
-    rowElement.addCell = index => Document.wrap(this.insertCell(index));
+    rowElement.addCell = (index) => Document.wrap(this.insertCell(index));
   }
 
   static wrap(domElement) {

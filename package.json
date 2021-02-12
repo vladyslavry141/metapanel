@@ -10,7 +10,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint . --fix"
   },
   "engines": {
     "node": "^12.9 || 14 || 15"

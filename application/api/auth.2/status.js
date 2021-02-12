@@ -1,7 +1,7 @@
 ({
   access: 'public',
   async method() {
-    const status = context.token ? true : false;
+    const status = !!context.token;
     return { result: status };
   }
 });

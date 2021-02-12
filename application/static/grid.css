@@ -1,0 +1,107 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-5 {
+    flex: 0 0 5%;
+    max-width: calc(5% - 30px);
+}
+.col-10 {
+    flex: 0 0 10%;
+    max-width: calc(10% - 30px);
+}
+.col-15 {
+    flex: 0 0 15%;
+    max-width: calc(15% - 30px);
+}
+.col-20 {
+    flex: 0 0 20%;
+    max-width: calc(20% - 30px);
+}
+.col-25 {
+    flex: 0 0 25%;
+    max-width: calc(25% - 30px);
+}
+.col-30 {
+    flex: 0 0 30%;
+    max-width: calc(30% - 30px);
+}
+.col-35 {
+    flex: 0 0 35%;
+    max-width: calc(35% - 30px);
+}
+.col-40 {
+    flex: 0 0 40%;
+    max-width: calc(40% - 30px);
+}
+.col-45 {
+    flex: 0 0 45%;
+    max-width: calc(45% - 30px);
+}
+.col-50 {
+    flex: 0 0 50%;
+    max-width: calc(50% - 30px);
+}
+.col-55 {
+    flex: 0 0 55%;
+    max-width: calc(55% - 30px);
+}
+.col-60 {
+    flex: 0 0 60%;
+    max-width: calc(60% - 30px);
+}
+.col-65 {
+    flex: 0 0 65%;
+    max-width: calc(65% - 30px);
+}
+.col-70 {
+    flex: 0 0 70%;
+    max-width: calc(70% - 30px);
+}
+.col-75 {
+    flex: 0 0 75%;
+    max-width: calc(75% - 30px);
+}
+.col-80 {
+    flex: 0 0 80%;
+    max-width: calc(80% - 30px);
+}
+.col-85 {
+    flex: 0 0 85%;
+    max-width: calc(85% - 30px);
+}
+.col-90 {
+    flex: 0 0 90%;
+    max-width: calc(90% - 30px);
+}
+.col-95 {
+    flex: 0 0 95%;
+    max-width: calc(95% - 30px);
+}
+.col-100 {
+    flex: 0 0 100%;
+    max-width: calc(100% - 30px);
+}
+
+.block {
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px #0000008a;
+}
+
+.block h4 {
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    background: #000;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+}
+.block > div {
+	padding: 15px;
+    text-transform: none;
+}
