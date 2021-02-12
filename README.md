@@ -18,7 +18,9 @@ Type in terminal:
 git clone https://github.com/UniversityTeam/metapanel
 cd metapanel
 npm i
-./application/db/setup.sh
+cd ./application/db/
+sh setup.sh
+cd ../../
 sudo node server.js
 ```
 Then check [localhost](http://localhost)
