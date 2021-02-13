@@ -34,6 +34,18 @@ CREATE TABLE "SystemSession" (
 ALTER TABLE "SystemSession" ADD CONSTRAINT "pkSystemSession" PRIMARY KEY ("systemSessionId");
 ALTER TABLE "SystemSession" ADD CONSTRAINT "fkSystemSessionUser" FOREIGN KEY ("systemUserId") REFERENCES "SystemUser" ("systemUserId");
 
+CREATE TABLE "TODOList" (
+  "noteId" bigint generated always as identity,
+  "noteText" varchar NOT NULL CHECK ("TODOList"."noteText" <> ''),
+  "createdBy" bigint NOT NULL,
+  "createdFor" bigint,
+  "creationDate" timestamp DEFAULT current_timestamp
+);
+
+ALTER TABLE "TODOList" ADD CONSTRAINT "pkTODOList" PRIMARY KEY ("noteId");
+ALTER TABLE "TODOList" ADD CONSTRAINT "fkTODOListCreatedBy" FOREIGN KEY ("createdBy") REFERENCES "SystemUser" ("systemUserId");
+ALTER TABLE "TODOList" ADD CONSTRAINT "fkTODOListCreatedFor" FOREIGN KEY ("createdFor") REFERENCES "SystemUser" ("systemUserId");
+
 CREATE TABLE "Country" (
   "countryId" bigint generated always as identity,
   "name" varchar NOT NULL
